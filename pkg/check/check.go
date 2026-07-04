@@ -3,7 +3,6 @@ package check
 
 import (
 	"fmt"
-	"math"
 	"regexp"
 	"strings"
 
@@ -273,22 +272,4 @@ func checkEmptySensitive(tree *config.Tree, result *Result) {
 	}
 }
 
-// Shannon entropy calculation for detecting high-entropy strings (likely secrets).
-func shannonEntropy(s string) float64 {
-	if len(s) == 0 {
-		return 0
-	}
-	freq := make(map[rune]float64)
-	for _, ch := range s {
-		freq[ch]++
-	}
-	length := float64(len(s))
-	entropy := 0.0
-	for _, count := range freq {
-		p := count / length
-		if p > 0 {
-			entropy -= p * math.Log2(p)
-		}
-	}
-	return entropy
-}
+
