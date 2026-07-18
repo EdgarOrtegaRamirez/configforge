@@ -179,12 +179,12 @@ func weakPasswordReason(pw string) string {
 
 func checkInsecureDefaults(tree *config.Tree, result *Result) {
 	insecureDefaults := map[string][]string{
-		"ssl_verify":    {"false", "0", "no"},
-		"tls_verify":    {"false", "0", "no"},
-		"debug":         {"true", "1", "yes"},
+		"ssl_verify":        {"false", "0", "no"},
+		"tls_verify":        {"false", "0", "no"},
+		"debug":             {"true", "1", "yes"},
 		"allow_all_origins": {"true", "1", "yes"},
-		"cors_allow_all": {"true", "1", "yes"},
-		"trust_proxy":   {"true", "1", "yes"},
+		"cors_allow_all":    {"true", "1", "yes"},
+		"trust_proxy":       {"true", "1", "yes"},
 	}
 
 	flat := tree.Flatten()
@@ -213,13 +213,13 @@ func checkInsecureDefaults(tree *config.Tree, result *Result) {
 
 func checkUnsafeSettings(tree *config.Tree, result *Result) {
 	unsafeSettings := map[string]string{
-		"eval":            "use of eval is dangerous",
-		"shell":           "shell execution detected",
-		"exec":            "command execution detected",
-		"allow_http":      "HTTP should be disabled in production",
-		"disable_auth":    "authentication is disabled",
-		"no_auth":         "authentication is disabled",
-		"anonymous":       "anonymous access enabled",
+		"eval":         "use of eval is dangerous",
+		"shell":        "shell execution detected",
+		"exec":         "command execution detected",
+		"allow_http":   "HTTP should be disabled in production",
+		"disable_auth": "authentication is disabled",
+		"no_auth":      "authentication is disabled",
+		"anonymous":    "anonymous access enabled",
 	}
 
 	flat := tree.Flatten()
@@ -271,5 +271,3 @@ func checkEmptySensitive(tree *config.Tree, result *Result) {
 		}
 	}
 }
-
-

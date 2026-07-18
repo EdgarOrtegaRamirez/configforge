@@ -201,10 +201,10 @@ type DeprecatedKeyRule struct{}
 func (r *DeprecatedKeyRule) Name() string { return "deprecated-key" }
 
 var deprecatedKeys = map[string]string{
-	"debug_mode":   "use LOG_LEVEL=debug instead",
-	"use_ssl":      "use TLS_CONFIG instead",
-	"db_driver":    "auto-detected from connection string",
-	"log_to_file":  "use LOG_OUTPUT=file:/path instead",
+	"debug_mode":  "use LOG_LEVEL=debug instead",
+	"use_ssl":     "use TLS_CONFIG instead",
+	"db_driver":   "auto-detected from connection string",
+	"log_to_file": "use LOG_OUTPUT=file:/path instead",
 }
 
 func (r *DeprecatedKeyRule) Check(tree *config.Tree) []Issue {

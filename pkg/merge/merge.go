@@ -13,10 +13,10 @@ import (
 type Strategy int
 
 const (
-	LastWins   Strategy = iota // Later value overwrites earlier
-	FirstWins                  // Earlier value takes precedence
-	Union                      // Combine both values (for lists)
-	Error                      // Return error on conflict
+	LastWins  Strategy = iota // Later value overwrites earlier
+	FirstWins                 // Earlier value takes precedence
+	Union                     // Combine both values (for lists)
+	Error                     // Return error on conflict
 )
 
 // Conflict represents a merge conflict.

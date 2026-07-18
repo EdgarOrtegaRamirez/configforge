@@ -49,9 +49,9 @@ type DiffResult struct {
 
 // DiffStats summarizes the diff.
 type DiffStats struct {
-	Added    int
-	Removed  int
-	Modified int
+	Added     int
+	Removed   int
+	Modified  int
 	Unchanged int
 }
 

@@ -12,9 +12,9 @@ import (
 type Value struct {
 	Kind     ValueKind
 	Scalar   interface{} // string, int, float64, bool, nil
-	Children []*Entry     // for maps and lists
-	Raw      string       // original raw representation
-	Line     int          // source line number (0 if unknown)
+	Children []*Entry    // for maps and lists
+	Raw      string      // original raw representation
+	Line     int         // source line number (0 if unknown)
 }
 
 // ValueKind enumerates the types of config values.

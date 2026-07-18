@@ -6,8 +6,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/EdgarOrtegaRamirez/configforge/pkg/config"
 	"github.com/BurntSushi/toml"
+	"github.com/EdgarOrtegaRamirez/configforge/pkg/config"
 )
 
 // ParseTOML parses a TOML file into a config Tree.
